@@ -8,8 +8,13 @@ JavascriptConvinientCalculate
 		prototype上增加方法或者是直接书写新的方法来执行加减乘除四则运算。那么当一个计算式中出现比  
 		较复杂的混合运算时代码的可读性就变得非常的差，所以就写出了这么一个工具。
 
+### 安装命令
+```bash
+bower install js-calculate --save
+```
+
 ### 使用方法
-		调用calc()方法，传入两个参数：  
+		调用calculate()方法，传入两个参数：  
 		第一个参数是表达式(expression)，可以将所需计算的公式直接写出来，避免出现了各种计算方法的嵌套，  
 		增强了代码可读性。表达式中可以出现标识符，但是不能出现对象成员或数组元素（即不能有“.”和“[]”）。  
 		第二个参数是表达式中出现的标识符，需要写成一个对象，对象的成员对应表达式中的标识符，具体可参考  
@@ -20,7 +25,7 @@ JavascriptConvinientCalculate
 		【其中apple=6, _banana=4, pear=2, orange=8；  
 		计算结果应该是(6 + 4 * (2 + 4) / (8 - 2)) / 2 = 5】  
 		则程序代码如下：  
-		calc("(apple + _banana * (pear + 4) / (orange - 2)) / 2", {  
+		calculate("(apple + _banana * (pear + 4) / (orange - 2)) / 2", {  
 			apple: 6,  
 			_banana: 4,  
 			pear: 2,  
