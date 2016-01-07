@@ -20,21 +20,31 @@ bower install js-calculate --save
 		第二个参数是表达式中出现的标识符，需要写成一个对象，对象的成员对应表达式中的标识符，具体可参考  
 		下面的例子。
 
-### 例子
-		要进行一个混合运算： (apple + _banana * (pear + 4) / (orange - 2)) / 2  
-		【其中apple=6, _banana=4, pear=2, orange=8；  
-		计算结果应该是(6 + 4 * (2 + 4) / (8 - 2)) / 2 = 5】  
-		则程序代码如下：  
-		calculate("(apple + _banana * (pear + 4) / (orange - 2)) / 2", {  
-			apple: 6,  
-			_banana: 4,  
-			pear: 2,  
-			orange: 8  
-		});  
-		函数执行完毕后的返回值为5，计算正确，可读性良好。
+### 例子  
+```javascript
+/*
+要进行一个混合运算： (apple + _banana * (pear + 4) / (orange - 2)) / 2  
+【其中apple=6, _banana=4, pear=2, orange=8；  
+计算结果应该是(6 + 4 * (2 + 4) / (8 - 2)) / 2 = 5】  
+则程序代码如下：
+*/
+calculate("(apple + _banana * (pear + 4) / (orange - 2)) / 2", {  
+    apple: 6,  
+    _banana: 4,  
+    pear: 2,  
+    orange: 8  
+}); 
+
+//函数执行完毕后的返回值为5，计算正确，可读性良好。
+```
 
 ### 对比
-		还是上面的例子，如果使用的是自定义的加减乘除方法numSum()，numSub()，unmMuti()，numDiv()  
-		最终程序代码就是这样的：  
-		numDiv(numSum(apple, numDIv(numMulti(_banana,numSum(pear,4)),numSub(orange,2))),2);  
-		计算结果依然是正确的，但程序可读性非常差，书写时极易出现错误，出现错误后很难排查……
+```javascript
+/*
+还是上面的例子，如果使用的是自定义的加减乘除方法numSum()，numSub()，unmMuti()，numDiv()  
+最终程序代码就是这样的：  
+*/
+numDiv(numSum(apple, numDIv(numMulti(_banana,numSum(pear,4)),numSub(orange,2))),2);  
+
+//计算结果依然是正确的，但程序可读性非常差，书写时极易出现错误，出现错误后很难排查……
+```
