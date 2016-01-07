@@ -44,3 +44,7 @@ Temporary Items
 
 #JetBrains Config Files
 .idea
+
+#Extra Libraries
+node_modules
+bower_components
