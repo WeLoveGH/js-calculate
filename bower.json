@@ -1,7 +1,7 @@
 {
   "name": "js-calculate",
   "description": "A small useful tool which can convinient calculate in javascript.",
-  "main": "dist/js-calculate.js",
+  "main": "./dist/js-calculate.js",
   "authors": [
     "hongjian1993"
   ],
