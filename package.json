@@ -2,7 +2,7 @@
   "name": "js-calculate",
   "version": "1.0.0",
   "description": "A small useful tool which can convinient calculate in javascript.",
-  "main": "js-calculate.js",
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",

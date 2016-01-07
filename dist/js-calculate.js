@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Created by hongjian1993 on 15/8/17.
  */
@@ -17,7 +15,9 @@
  * 则返回结果就是(10/5-(-4+6)*2=-2)
  */
 
-function calculate(expression, variables) {
+(function calculate(expression, variables) {
+    'use strict';
+
     /**
      * 加法
      * @param num1 第一个数字
@@ -101,7 +101,7 @@ function calculate(expression, variables) {
             // 表达式中的变量未被定义时抛出异常
             var variableName = variable[0];
             var variableValue = variables[variableName];
-            if(variableValue == undefined) {
+            if(variableValue === undefined) {
                 throw new Error('表达式中的变量 ' + variableName + ' 没有被定义!');
             }
             // 将表达式中的变量替换为其对应的值
@@ -122,16 +122,17 @@ function calculate(expression, variables) {
             // 去掉字串中的括号
             var blockInner = block[0].substr(1, block[0].length-2);
             // 作为一个新的表达式进行递归计算,将计算结果替换括号的位置
-            expression = expression.replace(block[0], calc(blockInner, variables));
+            expression = expression.replace(block[0], calculate(blockInner, variables));
             // 匹配表达式中是否还有括号
             block = expression.match(/\([^\(\)]*\)/);
         }
         // 通过正则表达式取出除法表达式
         var divExpression = expression.match(/\-?\d+\.?\d*\/\-?\d+\.?\d*/);
+        var operationNum; // 预定义一个操作数
         // 当表达式中有除法时循环计算每个除法表达式的值
         while(divExpression) {
             // 取出除数和被除数
-            var operationNum = divExpression[0].split('/');
+            operationNum = divExpression[0].split('/');
             // 进行除法计算,将计算结果替换原来出发表达式的位置
             expression = expression.replace(divExpression, numDiv(operationNum[0], operationNum[1], 10));
             // 匹配表达式中是否还有除法
@@ -159,4 +160,4 @@ function calculate(expression, variables) {
     }
 
     return mixCalc();
-}
+})();

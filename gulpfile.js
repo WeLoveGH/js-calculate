@@ -14,13 +14,16 @@ gulp.task('default', function() {
     // 默认的任务代码
 });
 
-gulp.task('scripts', function() {
+gulp.task('jshint', function() {
     return gulp.src('dist/*.js')
         .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('default'))
-        .pipe(gulp.dest('dist'))
-        .pipe(rename({suffix: '.min'}))
+        .pipe(jshint.reporter('default'));
+});
+
+gulp.task('scripts', ['jshint'], function() {
+    return gulp.src('dist/*.js')
         .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist'))
         .pipe(notify({ message: 'Scripts task complete' }));
 });
