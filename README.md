@@ -1,4 +1,4 @@
-JavascriptConvinientCalculate
+js-calculate
 ===================================
 		A small useful tool which can convinient calculate in javascript.
 
