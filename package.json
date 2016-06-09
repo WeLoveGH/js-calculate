@@ -2,31 +2,22 @@
   "name": "js-calculate",
   "version": "1.0.0",
   "description": "A small useful tool which can convinient calculate in javascript.",
-  "main": "./dist/js-calculate.js",
-  "dependencies": {},
-  "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.1",
-    "jshint": "^2.8.0"
-  },
+  "main": "calculate.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hongjian1993/JavascriptConvinientCalculate.git"
+    "url": "git+https://github.com/coderge/js-calculate.git"
   },
   "keywords": [
+    "js",
     "calculate"
   ],
-  "author": "hongjian1993",
+  "author": "coderge",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hongjian1993/JavascriptConvinientCalculate/issues"
+    "url": "https://github.com/coderge/js-calculate/issues"
   },
-  "homepage": "https://github.com/hongjian1993/JavascriptConvinientCalculate#readme"
+  "homepage": "https://github.com/coderge/js-calculate#readme"
 }

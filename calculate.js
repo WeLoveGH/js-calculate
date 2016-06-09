@@ -15,7 +15,7 @@
  * 则返回结果就是(10/5-(-4+6)*2=-2)
  */
 
-window.calculate = function (expression, variables) {
+exports.calculate = function (expression, variables) {
     'use strict';
 
     var calculate = window.calculate,
