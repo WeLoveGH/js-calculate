@@ -1,6 +1,6 @@
 {
   "name": "js-calculate",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A small useful tool which can convinient calculate in javascript.",
   "main": "calculate.js",
   "scripts": {
@@ -19,5 +19,5 @@
   "bugs": {
     "url": "https://github.com/coderge/js-calculate/issues"
   },
-  "homepage": "https://github.com/coderge/js-calculate#readme"
+  "homepage": "https://github.com/coderge/js-calculate"
 }
