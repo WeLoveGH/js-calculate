@@ -1,12 +1,16 @@
 js-calculate
 ===================================
-		A small useful tool which can convinient calculate in javascript.
+```
+A small useful tool which can convinient calculate in javascript.
+```
 
 ### 可方便进行Javascript计算的小工具
-		这是一个可以方便地进行Javascript进行计算的小工具。  
-		在Javascript中，计算精度的丢失是一件很令人伤心的事情，无奈的我们只能是通过给Number对象的  
-		prototype上增加方法或者是直接书写新的方法来执行加减乘除四则运算。那么当一个计算式中出现比  
-		较复杂的混合运算时代码的可读性就变得非常的差，所以就写出了这么一个工具。
+```
+这是一个可以方便地进行Javascript进行计算的小工具。  
+在Javascript中，计算精度的丢失是一件很令人伤心的事情，无奈的我们只能是通过给Number对象的  
+prototype上增加方法或者是直接书写新的方法来执行加减乘除四则运算。那么当一个计算式中出现比  
+较复杂的混合运算时代码的可读性就变得非常的差，所以就写出了这么一个工具。
+```
 
 ### 安装命令
 ```bash
@@ -16,17 +20,17 @@ npm install js-calculate --save
 ### 使用方法
 ```javascript
 const calculate = require('js-calculate');
-```
 
-```javascript
 import { calculate } from 'js-calculate';
 ```
 
-		调用calculate()方法，传入两个参数：  
-		第一个参数是表达式(expression)，可以将所需计算的公式直接写出来，避免出现了各种计算方法的嵌套，  
-		增强了代码可读性。表达式中可以出现标识符，但是不能出现对象成员或数组元素（即不能有“.”和“[]”）。  
-		第二个参数是表达式中出现的标识符，需要写成一个对象，对象的成员对应表达式中的标识符，具体可参考  
-		下面的例子。
+```
+调用calculate()方法，传入两个参数：  
+第一个参数是表达式(expression)，可以将所需计算的公式直接写出来，避免出现了各种计算方法的嵌套，  
+增强了代码可读性。表达式中可以出现标识符，但是不能出现对象成员或数组元素（即不能有“.”和“[]”）。  
+第二个参数是表达式中出现的标识符，需要写成一个对象，对象的成员对应表达式中的标识符，具体可参考  
+下面的例子。
+```
 
 ### 例子  
 ```javascript
