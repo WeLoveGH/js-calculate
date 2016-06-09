@@ -14,9 +14,13 @@ npm install js-calculate --save
 ```
 
 ### 使用方法
-		const calculate = require('js-calculate');
-		或者
-		import { calculate } from 'js-calculate';
+```javascript
+const calculate = require('js-calculate');
+```
+
+```javascript
+import { calculate } from 'js-calculate';
+```
 
 		调用calculate()方法，传入两个参数：  
 		第一个参数是表达式(expression)，可以将所需计算的公式直接写出来，避免出现了各种计算方法的嵌套，  
