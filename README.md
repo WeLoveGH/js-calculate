@@ -10,10 +10,14 @@ js-calculate
 
 ### 安装命令
 ```bash
-bower install js-calculate --save
+npm install js-calculate --save
 ```
 
 ### 使用方法
+		const calculate = require('js-calculate');
+		或者
+		import { calculate } from 'js-calculate';
+
 		调用calculate()方法，传入两个参数：  
 		第一个参数是表达式(expression)，可以将所需计算的公式直接写出来，避免出现了各种计算方法的嵌套，  
 		增强了代码可读性。表达式中可以出现标识符，但是不能出现对象成员或数组元素（即不能有“.”和“[]”）。  
@@ -33,7 +37,7 @@ calculate("(apple + _banana * (pear + 4) / (orange - 2)) / 2", {
     _banana: 4,  
     pear: 2,  
     orange: 8  
-}); 
+});
 
 //函数执行完毕后的返回值为5，计算正确，可读性良好。
 ```
